@@ -17,7 +17,7 @@ if ($editorVersion -eq $null) {
 }
 else {
     $editor = $unityEditorsPath + $editorVersion + "\Editor\Unity.exe"
-    if (Test-Path -Path $projectPath\$unityProjectFile) {
+    if (Test-Path -Path $editor) {
         Write-Host "Opening [$projectPath] with version [$editorVersion] of unity."
         & $editor -projectPath "$projectPath"
     }
